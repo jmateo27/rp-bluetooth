@@ -1,44 +1,24 @@
-rp-bluetooth
-    build/
-    blink.c
-    CMakeLists.txt
-    pico_sdk_import.cmake
+$ cmake ..
+CMake Error at CMakeLists.txt:12 (include):
+  include could not find requested file:
+
+    c/Users/ConeTec/pico/pico-sdk/pico_sdk_init.cmake
 
 
-blink.c:
-#include "pico/stdlib.h"
-
-int main() {
-    const uint LED_PIN = 25;
-    gpio_init(LED_PIN);
-    gpio_set_dir(LED_PIN, GPIO_OUT);
-
-    while (true) {
-        gpio_put(LED_PIN, 1);
-        sleep_ms(250);
-        gpio_put(LED_PIN, 0);
-        sleep_ms(250);
-    }
-}
-
-CMakeLists.txt:
-cmake_minimum_required(VERSION 3.13)
-
-include($ENV{PICO_SDK_PATH}/pico_sdk_init.cmake)
-
-project(blink_project)
-
-pico_sdk_init()
-
-add_executable(blink
-    blink.c
-)
-
-target_link_libraries(blink pico_stdlib)
-
-pico_add_extra_outputs(blink)
+-- The C compiler identification is GNU 15.1.0
+-- The CXX compiler identification is GNU 15.1.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /mingw64/bin/cc.exe - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /mingw64/bin/c++.exe - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+CMake Error at CMakeLists.txt:16 (pico_sdk_init):
+  Unknown CMake command "pico_sdk_init".
 
 
-pico_sdk_import.cmake:
-set(PICO_SDK_PATH "$ENV{PICO_SDK_PATH}")
-include(${PICO_SDK_PATH}/external/pico_sdk_import.cmake)
+-- Configuring incomplete, errors occurred!

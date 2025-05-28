@@ -1,1 +1,1 @@
-echo 'export PICO_TOOLCHAIN_PATH="/c/Progra~2/ArmGN~1/14.2.Rel1"' >> ~/.bashrc
+echo 'export PICO_TOOLCHAIN_PATH="/c/Progra~2/ArmGNU~1/14EFD8~1.2RE"' >> ~/.bashrc

@@ -1,13 +1,44 @@
-$ make
-[  1%] Building ASM object pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/compile_time_choice.S.o
-In file included from C:/Users/ConeTec/pico/pico-sdk/src/common/pico_base_headers/include/pico/config.h:19,
-                 from C:/Users/ConeTec/pico/pico-sdk/src/common/pico_base_headers/include/pico.h:33,
-                 from C:/Users/ConeTec/pico/pico-sdk/src/rp2040/boot_stage2/include/boot_stage2/config.h:12,
-                 from C:/Users/ConeTec/pico/pico-sdk/src/rp2040/boot_stage2/compile_time_choice.S:11:
-C:/Users/ConeTec/Documents/rp_bluetooth/rp-bluetooth/build/generated/pico_base/pico/config_autogen.h:7:10: fatal error: /c/Users/ConeTec/pico/pico-sdk/src/boards/include/boards/pico.h: No such file or directory
-    7 | #include "/c/Users/ConeTec/pico/pico-sdk/src/boards/include/boards/pico.h"
-      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-compilation terminated.
-make[2]: *** [pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/build.make:78: pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/compile_time_choice.S.o] Error 1
-make[1]: *** [CMakeFiles/Makefile2:2316: pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/all] Error 2
-make: *** [Makefile:91: all] Error 2
+rp-bluetooth
+    build/
+    blink.c
+    CMakeLists.txt
+    pico_sdk_import.cmake
+
+
+blink.c:
+#include "pico/stdlib.h"
+
+int main() {
+    const uint LED_PIN = 25;
+    gpio_init(LED_PIN);
+    gpio_set_dir(LED_PIN, GPIO_OUT);
+
+    while (true) {
+        gpio_put(LED_PIN, 1);
+        sleep_ms(250);
+        gpio_put(LED_PIN, 0);
+        sleep_ms(250);
+    }
+}
+
+CMakeLists.txt:
+cmake_minimum_required(VERSION 3.13)
+
+include($ENV{PICO_SDK_PATH}/pico_sdk_init.cmake)
+
+project(blink_project)
+
+pico_sdk_init()
+
+add_executable(blink
+    blink.c
+)
+
+target_link_libraries(blink pico_stdlib)
+
+pico_add_extra_outputs(blink)
+
+
+pico_sdk_import.cmake:
+set(PICO_SDK_PATH "$ENV{PICO_SDK_PATH}")
+include(${PICO_SDK_PATH}/external/pico_sdk_import.cmake)

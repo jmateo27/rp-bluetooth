@@ -1,1 +1,13 @@
-echo 'export PICO_TOOLCHAIN_PATH="/c/Progra~2/ArmGNU~1/14EFD8~1.2RE"' >> ~/.bashrc
+$ make
+[  1%] Building ASM object pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/compile_time_choice.S.o
+In file included from C:/Users/ConeTec/pico/pico-sdk/src/common/pico_base_headers/include/pico/config.h:19,
+                 from C:/Users/ConeTec/pico/pico-sdk/src/common/pico_base_headers/include/pico.h:33,
+                 from C:/Users/ConeTec/pico/pico-sdk/src/rp2040/boot_stage2/include/boot_stage2/config.h:12,
+                 from C:/Users/ConeTec/pico/pico-sdk/src/rp2040/boot_stage2/compile_time_choice.S:11:
+C:/Users/ConeTec/Documents/rp_bluetooth/rp-bluetooth/build/generated/pico_base/pico/config_autogen.h:7:10: fatal error: /c/Users/ConeTec/pico/pico-sdk/src/boards/include/boards/pico.h: No such file or directory
+    7 | #include "/c/Users/ConeTec/pico/pico-sdk/src/boards/include/boards/pico.h"
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make[2]: *** [pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/build.make:78: pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/compile_time_choice.S.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:2316: pico-sdk/src/rp2040/boot_stage2/CMakeFiles/bs2_default.dir/all] Error 2
+make: *** [Makefile:91: all] Error 2

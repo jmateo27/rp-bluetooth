@@ -17,7 +17,7 @@ Steps for a Windows PC:
     git submodule update --init
     ```
     b. Add the following line in MSYS2's ".bashrc" file
-```
-echo 'export PICO_SDK_PATH=~/pico/pico-sdk' >> ~/.bashrc
-source ~/.bashrc
-```
+    ```
+    echo 'export PICO_SDK_PATH=~/pico/pico-sdk' >> ~/.bashrc
+    source ~/.bashrc
+    ```

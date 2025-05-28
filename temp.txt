@@ -1,68 +1,14 @@
-$ cmake ..
-PICO_SDK_PATH is /c/Users/ConeTec/pico/pico-sdk
-Defaulting platform (PICO_PLATFORM) to 'rp2040' since not specified.
-Defaulting target board (PICO_BOARD) to 'pico' since not specified.
-Using board configuration from /c/Users/ConeTec/pico/pico-sdk/src/boards/include/boards/pico.h
-Pico Platform (PICO_PLATFORM) is 'rp2040'.
--- Defaulting build type to 'Release' since not specified.
-Defaulting compiler (PICO_COMPILER) to 'pico_arm_cortex_m0plus_gcc' since not specified.
-Configuring toolchain based on PICO_COMPILER 'pico_arm_cortex_m0plus_gcc'
--- The ASM compiler identification is GNU
--- Found assembler: /mingw64/bin/cc.exe
-Build type is Release
--- Found Python3: /mingw64/bin/python3.12.exe (found version "3.12.10") found components: Interpreter
-TinyUSB available at /c/Users/ConeTec/pico/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040; enabling build support for USB.
-BTstack available at /c/Users/ConeTec/pico/pico-sdk/lib/btstack
-cyw43-driver available at /c/Users/ConeTec/pico/pico-sdk/lib/cyw43-driver
-lwIP available at /c/Users/ConeTec/pico/pico-sdk/lib/lwip
-mbedtls available at /c/Users/ConeTec/pico/pico-sdk/lib/mbedtls
-CMake Warning at /c/Users/ConeTec/pico/pico-sdk/tools/Findpicotool.cmake:30 (message):
-  No installed picotool with version 2.1.1 found - building from source
-
-  It is recommended to build and install picotool separately, or to set
-  PICOTOOL_FETCH_FROM_GIT_PATH to a common directory for all your SDK
-  projects
-Call Stack (most recent call first):
-  /c/Users/ConeTec/pico/pico-sdk/tools/CMakeLists.txt:138 (find_package)
-  /c/Users/ConeTec/pico/pico-sdk/tools/CMakeLists.txt:493 (pico_init_picotool)
-  /c/Users/ConeTec/pico/pico-sdk/src/cmake/on_device.cmake:56 (picotool_postprocess_binary)
-  CMakeLists.txt:24 (pico_add_extra_outputs)
-
-
-Downloading Picotool
--- Configuring done (9.9s)
-CMake Error: Error required internal CMake variable not set, cmake may not be built correctly.
-Missing variable is:
-CMAKE_ASM_COMPILE_OBJECT
-CMake Error: Error required internal CMake variable not set, cmake may not be built correctly.
-Missing variable is:
-CMAKE_ASM_COMPILE_OBJECT
-CMake Error: Error required internal CMake variable not set, cmake may not be built correctly.
-Missing variable is:
-CMAKE_ASM_COMPILE_OBJECT
-CMake Error: Error required internal CMake variable not set, cmake may not be built correctly.
-Missing variable is:
-CMAKE_ASM_COMPILE_OBJECT
-CMake Error: Error required internal CMake variable not set, cmake may not be built correctly.
-Missing variable is:
-CMAKE_ASM_COMPILE_OBJECT
-CMake Error: Error required internal CMake variable not set, cmake may not be built correctly.
-Missing variable is:
-CMAKE_ASM_COMPILE_OBJECT
-CMake Error: Error required internal CMake variable not set, cmake may not be built correctly.
-Missing variable is:
-CMAKE_ASM_COMPILE_OBJECT
-CMake Error: Error required internal CMake variable not set, cmake may not be built correctly.
-Missing variable is:
-CMAKE_ASM_COMPILE_OBJECT
-CMake Error: Error required internal CMake variable not set, cmake may not be built correctly.
-Missing variable is:
-CMAKE_ASM_COMPILE_OBJECT
-CMake Error: Error required internal CMake variable not set, cmake may not be built correctly.
-Missing variable is:
-CMAKE_ASM_COMPILE_OBJECT
-CMake Error: Error required internal CMake variable not set, cmake may not be built correctly.
-Missing variable is:
-CMAKE_ASM_COMPILE_OBJECT
--- Generating done (3.0s)
-CMake Generate step failed.  Build files cannot be regenerated correctly.
+MPY: soft reboot
+Scanning for BLE Beacon named Central...
+Traceback (most recent call last):
+  File "<stdin>", line 198, in <module>
+  File "asyncio/core.py", line 1, in run
+  File "asyncio/core.py", line 1, in run_until_complete
+  File "asyncio/core.py", line 1, in run_until_complete
+  File "<stdin>", line 196, in main
+  File "asyncio/funcs.py", line 1, in gather
+  File "asyncio/core.py", line 1, in run_until_complete
+  File "<stdin>", line 146, in run_central_mode
+  File "<stdin>", line 136, in ble_scan
+  File "aioble/central.py", line 202, in name
+UnicodeError:

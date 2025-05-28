@@ -9,9 +9,11 @@ if(WIN32)
     endif()
 endif()
 
-include($ENV{PICO_SDK_PATH}/pico_sdk_init.cmake)
+project(blink_project C CXX ASM)
 
-project(blink_project)
+enable_language(ASM)
+
+include($ENV{PICO_SDK_PATH}/pico_sdk_init.cmake)
 
 pico_sdk_init()
 
